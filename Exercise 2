@@ -1,0 +1,43 @@
+# Assignment-2
+import java.util.Scanner;
+/**
+ * Author: Leo Walker
+ * Date: 03/31/2016
+ * Email: law22700@email.vccs.edu
+ * Description: Write a program to display the sum, average, maximum and minimum of the user's numbers
+ */
+public class Exercise2 {
+    public static void main(String[] args) {
+        //Create Scanner and delimiters
+        Scanner keyboard1 = new Scanner(System.in);
+        keyboard1.useDelimiter(" ");
+        System.out.println("Enter five numbers (delimited by spaces): ");
+
+        //Name my variables
+        double x, y, z, q, p, sum, average, max, max1, max2, max3, min, min1, min2, min3;
+        x = keyboard1.nextDouble();
+        y = keyboard1.nextDouble();
+        z = keyboard1.nextDouble();
+        q = keyboard1.nextDouble();
+        p = keyboard1.nextDouble();
+
+        //Calculate the sum and average of the user's numbers
+        sum = (x+y+z+q+p);
+        average = sum/5;
+
+        //Calculate the maximum and minimum of the user's numbers
+        max = Math.max(x, y);
+        max1 = Math.max(z, q);
+        max2 = Math.max(max, p);
+        max3 = Math.max(max1, max2);
+
+        min = Math.min(x, y);
+        min1 = Math.min(z, q);
+        min2 = Math.min(min, p);
+        min3 = Math.min(min1, min2);
+
+        //Write the output of my program
+        System.out.println("The sum of those numbers is " + sum + "\nThe average of those numbers is " + average + "\nThe maximum of those numbers is " + max3 + "\nThe minimum of those numbers is " + min3);
+        keyboard1.close();
+      }
+}
